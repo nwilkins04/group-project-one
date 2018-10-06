@@ -1,0 +1,98 @@
+///
+/// Formula by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Features */
+
+	.features {
+		@include vendor('display', 'flex');
+		@include vendor('flex-wrap', 'wrap');
+		border: solid 2px;
+		border-radius: _size(border-radius);
+		margin: (_size(element-margin) * 1.75) 0 (_size(element-margin) * 1.75) 0;
+
+		> * {
+			@include padding(4em, 4em);
+			border-left: solid 2px;
+			border-top: solid 2px;
+			width: 50%;
+
+			.icon {
+				@include vendor('transition', (
+					'transform #{_duration(features)} ease',
+					'opacity #{_duration(features)} ease'
+				));
+			}
+		}
+
+		> :nth-child(1) {
+			border-top-width: 0;
+		}
+
+		> :nth-child(2) {
+			border-top-width: 0;
+		}
+
+		> :nth-child(2n - 1) {
+			border-left-width: 0;
+		}
+
+		@for $i from 1 through _misc(max-features) {
+			> :nth-child(#{$i}) {
+				.icon {
+					@include vendor('transition-delay', '#{(_duration(transition) * 0.75 * $i)}');
+				}
+			}
+		}
+
+		&.inactive {
+			> * {
+				.icon {
+					@include vendor('transform', 'scale(0.9) rotate(45deg)');
+					opacity: 0;
+				}
+			}
+		}
+
+		@include breakpoint(medium) {
+			> * {
+				@include padding(4em, 2em);
+			}
+		}
+
+		@include breakpoint(small) {
+			margin: _size(element-margin) 0 _size(element-margin) 0;
+
+			> * {
+				@include padding(2em, 1em);
+			}
+		}
+
+		@include breakpoint(xsmall) {
+			@include vendor('flex-direction', 'column');
+			@include vendor('flex-wrap', 'nowrap');
+
+			> * {
+				width: 100%;
+				border-left-width: 0;
+			}
+
+			> :nth-child(2) {
+				border-top-width: 2px;
+			}
+		}
+	}
+
+	@mixin color-features($p: null) {
+		.features {
+			border-color: _palette($p, border);
+
+			> * {
+				border-color: _palette($p, border);
+			}
+		}
+	}
+
+	@include color-features;
