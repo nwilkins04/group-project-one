@@ -1,11 +1,14 @@
 
-// add fire base
+//add fire base
 //button for adding hobbies
 //grab user hobby
 //temp object for holding employee
 //upload hobby data to firebase
 //console log to console to make sure its all working
 //clear text boxes
+
+
+// hey!!
 
 
 
