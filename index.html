@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Hobby Tracker</title>
 
 
     <!--Bootstrap-->
@@ -15,61 +15,80 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
 </head>
 <body>
+    <!--Hopefully weather API here-->
+    <div id="weather-info">
+        <div class="city">Your City</div>
+        <div class="temp">Your Current Temp</div>
+    </div>
 
     <!--jumbotron aka header-->
-    <div class="jumbotron jumbotron-fluid">
-            <h1 class="display-4">Hobbies</h1>
-            <p class="lead">Track time spent on hobbies here!</p>
+    <div class="jumbotron jumbotron-fluid bg-info">
+            <h1 class="display-4 text-center">Hobbies</h1>
+            <p class="lead text-center">Track time spent on hobbies here!</p>
     </div>
 
-    <!--Current Hobbies Tracked-->
-    <div class="card mb-4">
-        <div class="card-header">Current Hobbies Tracked</div>
-        <div class="card-body">
-            <table class="table tabl-sm table-hover" id="train-table">
-                <thead>
-                    <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Hobby</th>
-                        <th scope="col">Time Spent</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!--New table data should enter here-->
-                </tbody>
-            </table>
+    <div class="container">
+        <!--Current Hobbies Tracked-->
+        <div class="card mb-4">
+            <div class="card-header">Current Hobbies Tracked</div>
+            <div class="card-body">
+                <table class="table tabl-sm table-hover" id="train-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Hobby</th>
+                            <th scope="col">Hours</th>
+                            <th scope="col">Rating</th>
+                        </tr>
+                        <tr>
+                            <th class="float-right table-info" id="total-hours-input">Total Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--New table data should enter here-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!--Add Hobby Time-->
+        <div class="card mb-4">
+            <div class="card-header">Add Hobby</div>
+            <div class="card-body">
+                <!--Entry Form-->
+                <form>
+                    <div class="form-group">
+                        <label for="hobby-input">Hobby Name</label>
+                        <input class="form-control" id="hobby-input" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="dateStarted-input">Day Started</label>
+                        <input class="form-control" id="dateStarted-input" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="hours-input">Hours Completed</label>
+                        <input class="form-control" id="hours-input" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="rating-input">Rating (out of 5)</label>
+                        <input class="form-control" id="rating-input" type="text">
+                    </div>
+
+                    <!--Submit button-->
+                    <button class="btn btn-primary float-right" id="add-hobby-btn">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
-
-    <!--Current Hoobies Tracked-->
-    <div class="card mb-4">
-        <div class="card-header">Current Hobbies Tracked</div>
-        <div class="card-body">
-            <table class="table table-sm table-hover" id="hobbie-table"></table>
-                <thead>
-                    <tr>
-                        <th scope="col">Hobby</th>
-                        <th scope="col">Day Started</th>
-                        <th scope="col">Hours Completed</th>
-                        <th scope="col">Rating</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!--New Table Data here-->
-                </tbody>
-        </div>
-    </div>
-
-    <div>Date</div>
-
-    <div>Time Spent</div>
-
-    <div>Hobby</div>
-
-    <div>test</div>
-<!--link to js-->
+<!--link to main.js-->
 <script type="text/javascript" src="./javascripts/main.js"></script>
+
+<!--link to weather.js-->
+<script type="text/javascript" src="./javascripts/weather.js"></script>
 </body>
 </html>
