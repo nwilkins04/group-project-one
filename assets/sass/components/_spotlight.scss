@@ -1,0 +1,110 @@
+///
+/// Formula by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Spotlight */
+
+	.spotlight {
+		$main-pad: _size(main-pad);
+
+		@include vendor('display', 'flex');
+		@include vendor('align-items', 'center');
+
+		.content {
+			@include vendor('flex', '1');
+		}
+
+		.image {
+			@include vendor('transition', 'top #{_duration(spotlight)} ease');
+			display: block;
+			border-radius: 0.5em;
+			margin: ($main-pad * -1) 0 _size(element-margin) (_size(element-margin) * 2);
+			top: $main-pad;
+
+			&:before {
+				content: '';
+				display: block;
+				border-radius: 0.5em 0.5em 0 0;
+				border: solid 2px;
+				border-bottom: 0;
+				height: 3em;
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				border-radius: 0.5em;
+				height: 0.25em;
+				left: 50%;
+				margin-left: -1.5em;
+				top: 1.5em;
+				width: 3em;
+			}
+
+			img {
+				@include vendor('transition', 'opacity 1s ease');
+				@include vendor('transition-delay', '0.75s');
+				border-radius: 0;
+				width: 16em;
+				height: 17em;
+			}
+		}
+
+		&.alt {
+			@include vendor('flex-direction', 'row-reverse');
+
+			.image {
+				margin-left: 0;
+				margin-right: (_size(element-margin) * 2);
+			}
+		}
+
+		&.inactive {
+			.image {
+				top: $main-pad * 2;
+
+				img {
+					opacity: 0;
+				}
+			}
+		}
+
+		@include breakpoint(small) {
+			$main-pad: _size(main-pad) * 0.75;
+
+			@include vendor('flex-direction', 'column !important');
+
+			.content {
+				text-align: center;
+				-ms-flex: 0 1 auto;
+				width: 100%;
+			}
+
+			.image {
+				margin: ($main-pad * -1) auto _size(element-margin) auto !important;
+				top: $main-pad;
+			}
+		}
+	}
+
+	@mixin color-spotlight($p: null) {
+		.spotlight {
+			.image {
+				background-color: _palette($p, border);
+
+				&:before {
+					border-color: _palette($p, border);
+					background-color: _palette($p, bg);
+				}
+
+				&:after {
+					background-color: _palette($p, border);
+				}
+			}
+		}
+	}
+
+	@include color-spotlight;
