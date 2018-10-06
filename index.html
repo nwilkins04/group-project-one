@@ -24,80 +24,57 @@
             <p class="lead">Track time spent on hobbies here!</p>
     </div>
 
-    <!--Current Hobbies Tracked-->
-    <div class="card mb-4">
-        <div class="card-header">Current Hobbies Tracked</div>
-        <div class="card-body">
-            <table class="table tabl-sm table-hover" id="train-table">
-                <thead>
-                    <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Hobby</th>
-                        <th scope="col">Time Spent</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!--New table data should enter here-->
-                </tbody>
-            </table>
+
+    <div class="container">
+        <!--Current Hobbies Tracked-->
+        <div class="card mb-4">
+            <div class="card-header">Current Hobbies Tracked</div>
+            <div class="card-body">
+                <table class="table tabl-sm table-hover" id="train-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Hobby</th>
+                            <th scope="col">Time Spent</th>
+                            <th scope="col">Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--New table data should enter here-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!--Add Hobby Time-->
+        <div class="card mb-4">
+            <div class="card-header">Add Hobby</div>
+            <div class="card-body">
+                <!--Entry Form-->
+                <form>
+                    <div class="form-group">
+                        <label for="hobby-input">Hobby Name</label>
+                        <input class="form-control" id="hobby-input" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="dateStarted-input">Day Started</label>
+                        <input class="form-control" id="dateStarted-input" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="hours-input">Hours Completed</label>
+                        <input class="form-control" id="hours-input" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="rating-input">Rating (out of 5)</label>
+                        <input class="form-control" id="rating-input" type="text">
+                    </div>
+
+                    <!--Submit button-->
+                    <button class="btn btn-primary float-right" id="add-hobby-btn">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
-
-    <!--Current Hoobies Tracked-->
-    <div class="card mb-4">
-        <div class="card-header">Current Hobbies Tracked</div>
-        <div class="card-body">
-            <table class="table table-sm table-hover" id="hobbie-table"></table>
-                <thead>
-                    <tr>
-                        <th scope="col">Hobby</th>
-                        <th scope="col">Day Started</th>
-                        <th scope="col">Hours Completed</th>
-                        <th scope="col">Rating</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!--New Table Data here-->
-                </tbody>
-        </div>
-    </div>
-
-    <!--Add Hobby Time-->
-    <div class="card mb-4">
-        <div class="card-header">Add Hobby</div>
-        <div class="card-body">
-            <!--Entry Form-->
-            <form>
-                <div class="form-group">
-                    <label for="hobby-input">Hobby Name</label>
-                    <input class="form-control" id="hobby-input" type="text">
-                </div>
-                <div class="form-group">
-                    <label for="dateStarted-input">Day Started</label>
-                    <input class="form-control" id="dateStarted-input" type="text">
-                </div>
-                <div class="form-group">
-                    <label for="hours-input">Hours Completed</label>
-                    <input class="form-control" id="hours-input" type="text">
-                </div>
-                <div class="form-group">
-                    <label for="rating-input">Rating (out of 5)</label>
-                    <input class="form-control" id="rating-input" type="text">
-                </div>
-
-                <!--Submit button-->
-                <button class="btn btn-primary float-right" id="add-hobby-btn">Submit</button>
-            </form>
-        </div>
-    </div>
-
-    <div>Date</div>
-
-    <div>Time Spent</div>
-
-    <div>Hobby</div>
-
-    <div>test</div>
 <!--link to js-->
 <script type="text/javascript" src="./javascripts/main.js"></script>
 </body>
