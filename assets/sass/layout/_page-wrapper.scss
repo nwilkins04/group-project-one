@@ -1,0 +1,14 @@
+///
+/// Formula by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Page Wrapper */
+
+	#page-wrapper {
+		@include vendor('transition', 'opacity #{_duration(menu)} ease');
+		background-color: _palette(bg);
+		min-height: 100vh;
+		opacity: 1;
+	}
