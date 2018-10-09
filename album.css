@@ -35,3 +35,7 @@ footer {
 footer p {
   margin-bottom: .25rem;
 }
+
+body {
+  background-image: url(./assets/css/images/country-quilt.png)
+}
