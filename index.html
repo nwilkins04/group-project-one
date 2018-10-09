@@ -17,7 +17,10 @@
 
     <!--jquery-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
+    <!-- Moment.js Reference -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
 </head>
 <body>
     <!--Hopefully weather API here-->
@@ -37,7 +40,8 @@
         <div class="card mb-4">
             <div class="card-header">Current Hobbies Tracked</div>
             <div class="card-body">
-                <table class="table tabl-sm table-hover" id="train-table">
+                <!-- changed id name to "hobbie-table" -->
+                <table class="table tabl-sm table-hover" id="hobbie-table"> 
                     <thead>
                         <tr>
                             <th scope="col">Date</th>
@@ -45,12 +49,13 @@
                             <th scope="col">Hours</th>
                             <th scope="col">Rating</th>
                         </tr>
-                        <tr>
-                            <th class="float-right table-info" id="total-hours-input">Total Hours</th>
-                        </tr>
                     </thead>
                     <tbody>
                         <!--New table data should enter here-->
+
+                        <tr>
+                                <th class="float-right table-info" id="total-hours-input">Total Hours</th>
+                            </tr>
                     </tbody>
                 </table>
             </div>
@@ -89,6 +94,6 @@
 <script type="text/javascript" src="./javascripts/main.js"></script>
 
 <!--link to weather.js-->
-<script type="text/javascript" src="./javascripts/weather.js"></script>
+<!-- <script type="text/javascript" src="./javascripts/weather.js"></script> -->
 </body>
 </html>
