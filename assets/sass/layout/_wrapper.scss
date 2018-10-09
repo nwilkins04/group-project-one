@@ -1,0 +1,31 @@
+///
+/// Formula by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Wrapper */
+
+	#wrapper {
+		$main-pad: _size(main-pad);
+
+		> * {
+			@include padding($main-pad, 0);
+			border-bottom: solid 2px _palette(border);
+			overflow: hidden;
+
+			> .inner {
+				margin: 0 auto;
+				max-width: calc(100% - 4em);
+				width: _size(inner-width);
+			}
+		}
+
+		@include breakpoint(small) {
+			$main-pad: _size(main-pad) * 0.75;
+
+			> * {
+				@include padding($main-pad, 0);
+			}
+		}
+	}

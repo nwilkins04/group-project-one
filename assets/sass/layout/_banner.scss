@@ -1,0 +1,157 @@
+///
+/// Formula by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Banner */
+
+	#banner {
+		@include color-button(invert);
+		@include color-typography(invert);
+		@include padding(8em, 0);
+		@include vendor('align-items', 'center');
+		@include vendor('display', 'flex');
+		@include vendor('justify-content', 'center');
+		background-image: url('../../images/banner.jpg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-top: 0;
+		min-height: 100vh;
+		position: relative;
+		text-align: center;
+		overflow: hidden;
+
+		.inner {
+			@include vendor('transform', 'scale(1.0)');
+			@include vendor('transition', (
+				'opacity #{_duration(banner)} ease',
+				'transform #{_duration(banner)} ease'
+			));
+			opacity: 1;
+			position: relative;
+			z-index: 2;
+		}
+
+		h1 {
+			font-size: 2.75em;
+		}
+
+		@include keyframes(more) {
+			0% {
+				bottom: -3em;
+			}
+
+			100% {
+				bottom: 0;
+			}
+		}
+
+		.more {
+			@include vendor('transition', 'height #{_duration(transition)} ease');
+			@include vendor('animation', 'more 0.75s ease-out #{_duration(banner) * 3} forwards');
+			background-color: _palette(bg);
+			background-image: url('images/arrow.svg');
+			background-position: 50% 0.875em;
+			background-repeat: no-repeat;
+			background-size: auto;
+			border: 0;
+			border-radius: _size(border-radius) _size(border-radius) 0 0;
+			bottom: -3em;
+			color: _palette(fg);
+			display: block;
+			height: 3em;
+			left: 50%;
+			margin-left: -2.5em;
+			overflow: hidden;
+			position: absolute;
+			text-indent: 5em;
+			white-space: nowrap;
+			width: 5em;
+			z-index: 2;
+
+			&:hover {
+				height: 3.5em;
+			}
+		}
+
+		video {
+			@include vendor('transform', 'translateX(50%) translateY(50%)');
+			position: absolute;
+			bottom: 50%;
+			right: 50%;
+			width: auto;
+			height: auto;
+			min-width: 100%;
+			min-height: 100%;
+			overflow: hidden;
+		}
+
+		&:before {
+			@include vendor('transition', 'opacity 3s ease');
+			@include vendor('transition-delay', '#{_duration(banner) * 1.25}');
+			content: '';
+			display: block;
+			background-color: _palette(invert, bg);
+			height: 100%;
+			left: 0;
+			opacity: 0.45;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+		}
+
+		@include breakpoint(large) {
+			video {
+				display: none;
+			}
+		}
+
+		@include breakpoint(small) {
+			@include padding(4em, 2em, (2em, 0, 0, 0));
+			min-height: 0;
+
+			.inner {
+				width: 100%;
+			}
+
+			h1 {
+				font-size: 1.75em;
+				margin-bottom: 0.75em;
+				padding-bottom: 0.75em;
+			}
+
+			br {
+				display: none;
+			}
+
+			.more {
+				display: none;
+			}
+		}
+
+		@include breakpoint(xsmall) {
+			@include padding(6em, 2em, (2em, 0, 0, 0));
+		}
+
+		@include breakpoint(xxsmall) {
+			@include padding(4em, 2em, (2em, 0, 0, 0));
+		}
+
+		body.is-loading & {
+			.inner {
+				@include vendor('transform', 'scale(0.99)');
+				opacity: 0;
+			}
+
+			&:before {
+				opacity: 1;
+			}
+
+			.more {
+				bottom: -5em;
+			}
+		}
+	}

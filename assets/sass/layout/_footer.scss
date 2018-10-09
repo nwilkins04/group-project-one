@@ -1,0 +1,35 @@
+///
+/// Formula by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Footer */
+
+	#footer {
+		$main-pad: _size(main-pad);
+
+		@include padding($main-pad, 0);
+		background-color: _palette(bg-alt);
+		text-align: center;
+
+		> .inner {
+			margin: 0 auto;
+			max-width: calc(100% - 4em);
+			width: _size(inner-width);
+		}
+
+		.copyright {
+			color: _palette(fg-light);
+			font-size: 0.8em;
+		}
+
+		@include breakpoint(small) {
+			$main-pad: _size(main-pad) * 0.75;
+
+			@include padding($main-pad, 0);
+		}
+
+		@include breakpoint(xsmall) {
+		}
+	}

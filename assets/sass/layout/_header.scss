@@ -1,0 +1,167 @@
+///
+/// Formula by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
+/* Header */
+
+	#page-wrapper {
+		position: relative;
+		padding-top: 3.5em;
+
+		@include breakpoint(small) {
+			padding-top: 2.75em;
+		}
+	}
+
+	#header {
+		@include vendor('display', 'flex');
+		@include vendor('justify-content', 'space-between');
+		@include vendor('align-items', 'center');
+		@include vendor('transition', (
+			'border-bottom-color #{_duration(transition)} ease',
+			'color #{_duration(transition)} ease',
+			'background-color #{_duration(transition)} ease'
+		));
+		border-bottom: solid 2px _palette(border);
+		background: _palette(bg);
+		height: 3.5em;
+		left: 0;
+		line-height: 3.5em;
+		padding: 0 0 0 1.5em;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: _misc(z-index-base);
+
+		a {
+			color: inherit;
+			font-size: 0.8em;
+			font-weight: _font(weight-bold);
+			letter-spacing: _font(kerning);
+			text-transform: uppercase;
+			border: 0;
+		}
+
+		.logo {
+			display: block;
+			height: inherit;
+			line-height: inherit;
+
+			span {
+				font-weight: _font(weight);
+			}
+		}
+
+		nav {
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					display: inline-block;
+					padding: 0;
+
+					a {
+						display: inline-block;
+						padding: 0 1.5em 0 1.5em;
+						position: relative;
+
+						&[href="#menu"] {
+							padding-right: 3em;
+
+							&:before {
+								content: '';
+								background-image: url('images/menu.svg');
+								background-position: center;
+								background-repeat: no-repeat;
+								display: block;
+								height: 100%;
+								position: absolute;
+								right: 1.5em;
+								text-align: center;
+								top: 0;
+								width: 1em;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.alt {
+			background-color: transparent;
+			border-bottom-color: transparent;
+			color: _palette(invert, fg-bold);
+
+			nav {
+				ul {
+					li {
+						a {
+							&[href="#menu"] {
+								&:before {
+									background-image: url('images/menu-alt.svg');
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.with-banner {
+			& + #banner {
+				margin-top: -3.5em;
+			}
+		}
+
+		@include breakpoint(small) {
+			height: 2.75em;
+			line-height: 2.75em;
+			padding: 0 0 0 0.75em;
+
+			nav {
+				ul {
+					li {
+						a {
+							padding: 0 0.75em 0 0.75em;
+
+							&[href="#menu"] {
+								padding-right: 2.5em;
+
+								&:before {
+									right: 1em;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		@include breakpoint(xsmall) {
+			.logo {
+				span {
+					display: none;
+				}
+			}
+
+			nav {
+				ul {
+					li {
+						a {
+							&[href="#menu"] {
+								&:only-child {
+									width: 6em;
+									text-indent: 6em;
+									white-space: nowrap;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}

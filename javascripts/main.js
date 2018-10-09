@@ -1,34 +1,45 @@
 //add fire base
+ // Initialize Firebase
+ var config = {
+  apiKey: "AIzaSyAFwVw9TJOcpi_Oll6iTMFhHiqbjwyfjQw",
+  authDomain: "hobbies-41199.firebaseapp.com",
+  databaseURL: "https://hobbies-41199.firebaseio.com",
+  projectId: "hobbies-41199",
+  storageBucket: "hobbies-41199.appspot.com",
+  messagingSenderId: "867750830966"
+};
+firebase.initializeApp(config);
+
+var database = firebase.database();
+
 //button for adding hobbies
 $("#add-hobby-btn").on("click", function (event) {
     event.preventDefault();
 
     //grab user hobby
-    var dateStarted = ($("#dateStarted-input").val().trim(), "MM/DD/YYYY").format("X");
-
+    var dateStarted = $("#dateStarted-input").val().trim();
     var hobbyName = $("#hobby-input").val().trim();
-
     var hours = $("#hours-input").val().trim();
-
     var rating = $("#rating-input").val().trim()
-
-    //temp object for holding employee
+    
+    //temp object for holding new hobby
     var newHobby = {
         date: dateStarted,
         hobby: hobbyName,
-        hourz: hours,
+        // changed property name to "time" from "hourz"
+        time: hours,
         rate: rating
   };
 
 //upload hobby data to firebase
   database.ref().push(newHobby);
   
-
+  
 //console log to console to make sure its all working
-  console.log(dateStarted.date);
-  console.log(hobbyName.hobby);
-  console.log(hours.hourz);
-  console.log(rating.rate);
+  // console.log(newHobby.date);
+  // console.log(newHobby.hobby);
+  // console.log(newHobby.time);
+  // console.log(newHobby.rate);
 
   //clear text boxes
   $("#dateStarted-input").val("");
@@ -40,14 +51,37 @@ $("#add-hobby-btn").on("click", function (event) {
 })
 
 
+//firebase even for adding hobbies to database and a row in our html when user adds hobbies
 
+database.ref().on("child_added", function(childSnapshot) {
+  console.log(childSnapshot.val());
 
+  // Store everything into a variable.
+  var dateStarted = childSnapshot.val().date;
+  var hobbyName = childSnapshot.val().hobby;
+  var hours = childSnapshot.val().time;
+  var rating = childSnapshot.val().rate;
 
-// hey!!
+  // Employee Info
+  console.log(dateStarted);
+  console.log(hobbyName);
+  console.log(hours);
+  console.log(rating);
 
+  
 
+  // Create the new row
+  var newRow = $("<tr>").append(
+    $("<td>").text(dateStarted),
+    $("<td>").text(hobbyName),
+    $("<td>").text(hours),
+    $("<td>").text(rating),
+  );
 
-//firebase even for adding employee to database and a row in our html when user adds hobbies
+  // Append the new row to the table
+  $("#hobbie-table > tbody").append(newRow);
+});
+
 
 //date hobby was started
 
