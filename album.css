@@ -44,3 +44,13 @@ body {
   display: none;
   overflow: hidden;
 }
+
+.btn {
+  background-color: darkcyan;
+  color: black;
+  border-color: black;
+}
+
+img {
+  height: 250px;
+}
