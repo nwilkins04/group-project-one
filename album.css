@@ -39,3 +39,8 @@ footer p {
 body {
   background-image: url(./assets/css/images/country-quilt.png)
 }
+
+.content {
+  display: none;
+  overflow: hidden;
+}
