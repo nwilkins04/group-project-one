@@ -43,6 +43,7 @@ body {
 .content {
   display: none;
   overflow: hidden;
+  margin-left: 25px;
 }
 
 .btn {
