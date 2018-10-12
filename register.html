@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projet X</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- Moment.js Reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid bg-info">
+        <div class="container">
+            <h1 class="display-4 text-center">Hobby</h1>
+            <p class="lead text-center"></p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <form id="sign-in-form">
+
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-6">
+                    <input type="email" class="form-control" id="input-email" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-6">
+                    <input type="password" class="form-control" id="input-password" placeholder="Password">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+
+                    <a id="submit-register" type="submit" class="btn btn-success">Register</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="loged-in">
+        <button id="log-out" type="submit" class="btn btn-success">Sign Out</button>
+    </div>
+
+    <!--link to app.js-->
+    <script type="text/javascript" src="register.js"></script>
+</body>
+
+</html>
