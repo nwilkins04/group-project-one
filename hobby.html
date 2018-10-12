@@ -1,234 +1,379 @@
-
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
 
-    <title>All About Hobbies</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../../../favicon.ico">
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>All About Hobbies</title>
 
-    <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
-  </head>
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-  <body>
+  <!-- Firebase Reference -->
 
-    <header>
-      <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">About</h4>
-              <p class="text-muted">Add some information about the hobbies you like</p>
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Contact</h4>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                <li><a href="#" class="text-white">Like on Facebook</a></li>
-                <li><a href="#" class="text-white">Email me</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-            <strong>Album</strong>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </div>
-    </header>
+  <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
 
-    <main role="main">
+    var config = {
+      apiKey: "AIzaSyDFc3cuCpUrILVKhVmEUDxWSqz9bAxXeZU",
+      authDomain: "project-1abe.firebaseapp.com",
+      databaseURL: "https://project-1abe.firebaseio.com",
+      projectId: "project-1abe",
+      storageBucket: "project-1abe.appspot.com",
+      messagingSenderId: "770200531982"
+    };
+    firebase.initializeApp(config);
+    // var admin = require("firebase-admin");
 
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Hobby Examples</h1>
-          <p class="lead text-muted">Short and simplev information about the collection hobbies and the rules and regulations, how to play, the creator, etc. Visit our other pages to learn how you can track your hobbies and get started on honing your craft.</p>
-          <p>
-            <a href="index.html" class="btn btn-primary my-2">Track your Hobbies</a>
-            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-          </p>
-        </div>
-      </section>
+    // var serviceAccount = require("path/to/serviceAccountKey.json");
 
-      <div class="album py-5 bg-light">
-        <div class="container">
+    // admin.initializeApp({
+    //   credential: admin.credential.cert(serviceAccount),
+    //   databaseURL: "https://project-1abe.firebaseio.com"
+    // });
+    {
+      // "message": "success", 
+      // "timestamp": UNIX_TIME_STAMP, 
+      // "iss_position": {
+      //   "latitude": CURRENT_LATITUDE, 
+      //   "longitude": CURRENT_LONGITUDE
+      // }
+    }
+  </script>
+</head>
 
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="../group-project-one/assets/css/images/boats-canoe-clouds-831545.jpg" alt="man fishing from boat">
-                <div class="card-body">
-                  <p class="card-text">Fishing</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="../group-project-one/assets/css/images/animal-avian-beak-349758.jpg" alt="still image of hummingbird">
-                <div class="card-body">
-                  <p class="card-text">Bird Watching</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="./assets/css/images/alpine-alps-bigair-38242.jpg" alt="snowboarder in mid-air of jump">
-                <div class="card-body">
-                  <p class="card-text">Snowboarding</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
+<body>
+  <script src="javascripts/city.list.js"></script>
+  <script>
+    $(document).ready(function () {
 
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="./assets/css/images/adult-book-book-series-545068.jpg" alt="two adults reading books">
-                <div class="card-body">
-                  <p class="card-text">Reading</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="./assets/css/images/Ultimate-Frisbee1_large_large.jpg" alt="two men mid-catch in game of ultimate frisbee">
-                <div class="card-body">
-                  <p class="card-text">Ulitmate Frisbee</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="./assets/css/images/doing_quilting_sq.jpg" alt="hand sewing quilting">
-                <div class="card-body">
-                  <p class="card-text">Quilting</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
+      $("#search").click(function () {
+        console.log($("#city-search").val())
 
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="./assets/css/images/bigstock-Beach-Volleyball-Silhouette-81799844_(1).jpg" alt="beach volleyball at sunset">
-                <div class="card-body">
-                  <p class="card-text">Volleyball</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="./assets/css/images/cinema-food-movie-theater-33129.jpg" alt="popcorn at movies">
-                <div class="card-body">
-                  <p class="card-text">Watching Movies</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" src="./assets/css/images/appliance-cooking-housework-273850.jpg" alt="person looking at cooking book with appliances in front">
-                <div class="card-body">
-                  <p class="card-text">Cooking</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+       
+        for (key in cityList[i]) {
+          console.log(key);
+          // for (property in key) {
+          var userCity = $('#city-search').val()
+          var userCountry = 'US'
+          if (key["name"] === userCity) {
+            console.log("found the city")
 
-    </main>
 
-    <footer class="text-muted">
+
+          }
+        }
+      }
+
+
+        $.ajax(settings)
+
+
+        //      function scriptLoaded() {   
+        //     // do something
+        // }
+
+        // $.ajax({
+        //     url: '/javascript/myscript.js',
+        //     success: scriptLoaded()
+      });
+
+      // var userLongitude;//the long and lit user will havevar
+      // var userLatitude;//the city the user enteredvar 
+      // userCity = $('#city-search').val()
+      // //make sure this is right
+      // var userCountry = 'US'
+      // //or make an input and do above with the right 
+      // // id$.get('cityList.js', function (data) {
+      // //read data      
+      // for (var i = 0; i < cityList.length; i++) {
+      //   //make sure city and country match so you can get that specific data           
+      //   if (cityList.city === userCity && cityList.country === userCountry) {
+      //     //city and country were found          
+      //     userLongitude = cityList.longitude
+      //     //grab longitude data from json and put in variable           
+      // //     userLatitude = cityList.latitude //grab latitude              
+      //   };
+      //   };
+
+
+    //                             //now for the API do the following. Because now you have the 
+    // long and lat$.ajax(http: /APIURLHERE/APIKEY / ' + userLongitude + 'Lat' + userLatitude), 
+    // // ... finish apiyour code should do something like this
+
+
+     
+
+
+
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://api.darksky.net/forecast/3acbfa7cea4a91d37edd64fe44ab7aaa/42.3601,-71.0589",
+      "method": "GET",
+      "headers": {
+        'Access-Control-Allow-Origin': '*',
+        "Cache-Control": "no-cache",
+        "Postman-Token": "fd729064-e7a4-4955-b898-a70bdad3fa57"
+      }
+    }
+
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+    });
+});
+  </script>
+  <header>
+    <div class="collapse bg-dark" id="api">
       <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        
-        <p>All about Hobbies is &copy; ours, but please use and customize it for your own games!</p>
-        <p>New to Hobbies? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">About</h4>
+            <p class="text-muted">Add some information about the hobbies you like</p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Contact</h4>
+          </div>
+        </div>
       </div>
-    </footer>
+    </div>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">About</h4>
+            <p class="text-muted">Add some information about the hobbies you like</p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Contact</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Follow on Twitter</a></li>
+              <li><a href="#" class="text-white">Like on Facebook</a></li>
+              <li><a href="#" class="text-white">Email me</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+          <strong>Album</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-    <!-- Bootstrap core JavaScript
+  <main role="main">
+
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Hobby Examples</h1>
+        <p class="lead text-muted">Short and simplev information about the collection hobbies and the rules and
+          regulations, how to play, the creator, etc. Visit our other pages to learn how you can track your hobbies and
+          get started on honing your craft.</p>
+        <p>
+          <a href="index.html" class="btn btn-primary my-2">Track your Hobbies</a>
+          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="../group-project-one/assets/css/images/boats-canoe-clouds-831545.jpg" alt="man fishing from boat">
+              <div class="card-body">
+                <p class="card-text">Fishing</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="../group-project-one/assets/css/images/animal-avian-beak-349758.jpg" alt="still image of hummingbird">
+              <div class="card-body">
+                <p class="card-text">Bird Watching</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="./assets/css/images/alpine-alps-bigair-38242.jpg" alt="snowboarder in mid-air of jump">
+              <div class="card-body">
+                <p class="card-text">Snowboarding</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="./assets/css/images/adult-book-book-series-545068.jpg" alt="two adults reading books">
+              <div class="card-body">
+                <p class="card-text">Reading</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="./assets/css/images/Ultimate-Frisbee1_large_large.jpg" alt="two men mid-catch in game of ultimate frisbee">
+              <div class="card-body">
+                <p class="card-text">Ulitmate Frisbee</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="./assets/css/images/doing_quilting_sq.jpg" alt="hand sewing quilting">
+              <div class="card-body">
+                <p class="card-text">Quilting</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="./assets/css/images/bigstock-Beach-Volleyball-Silhouette-81799844_(1).jpg"
+                alt="beach volleyball at sunset">
+              <div class="card-body">
+                <p class="card-text">Volleyball</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="./assets/css/images/cinema-food-movie-theater-33129.jpg" alt="popcorn at movies">
+              <div class="card-body">
+                <p class="card-text">Watching Movies</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" src="./assets/css/images/appliance-cooking-housework-273850.jpg" alt="person looking at cooking book with appliances in front">
+              <div class="card-body">
+                <p class="card-text">Cooking</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div>
+      <label for="city-search">City Name</label>
+      <input type="text" id="city-search" placeholder="e.g. Rochester, NY">
+      <button id="search">Submit</button>
+    </div>
+
+  </main>
+
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Back to top</a>
+      </p>
+
+      <p>All about Hobbies is &copy; ours, but please use and customize it for your own games!</p>
+      <p>New to Hobbies? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting
+          started guide</a>.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+  <!-- Placed at the end of the document so the pages load faster -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" crossorigin="anonymous"></script>
+  x
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
