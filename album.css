@@ -6,9 +6,10 @@
   padding-top: var(--jumbotron-padding-y);
   padding-bottom: var(--jumbotron-padding-y);
   margin-bottom: 0;
-  background-color: #fff;
-  min-height: 100px;
+  background-color: darkcyan ;
+  height: 300px;
 }
+
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: calc(var(--jumbotron-padding-y) * 2);
@@ -16,6 +17,24 @@
   }
 }
 
+#main-header{
+  font-size: 60px;
+  margin-top: -80px;
+  margin-bottom:0px;
+  font-family: 'Shrikhand', cursive;
+  text-shadow: -1px 0 rgb(202, 202, 202), 0 1px rgb(202, 202, 202), 1px 0 rgb(202, 202, 202), 0 -1px rgb(202, 202, 202);
+}
+
+#top-paragraph{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+#hobby-track{
+  margin-bottom: -100px;
+
+}
 .jumbotron p:last-child {
   margin-bottom: 0;
 }
@@ -48,7 +67,7 @@ body {
 }
 
 .btn {
-  background-color: darkcyan;
+  background-color: 	#00a5a5;
   color: black;
   border-color: black;
 }
