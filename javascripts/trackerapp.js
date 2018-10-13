@@ -13,19 +13,19 @@ var database = firebase.database();
 
 $("#submit-btn").on("click", function (event) {
   event.preventDefault();
-
+//Grab the users input
   var hobbyName = $("#name-input").val().trim();
   var dateStarted = $("#destination-input").val().trim();
   var hours = $("#time-input").val().trim();
   var rating = $("#frequency-input").val().trim()
-
+// Object for the hobby fields 
   var newHobby = {
     hobbyName: hobbyName,
     dateStarted: dateStarted,
     hours: hours,
     rating: rating
   };
-
+//upload data to the database
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
 
@@ -39,7 +39,7 @@ $("#submit-btn").on("click", function (event) {
   });
 
   
-
+//clear text boxes
   $("#name-input").val("");
   $("#destination-input").val("");
   $("#time-input").val("");
@@ -59,7 +59,7 @@ firebase.auth().onAuthStateChanged(function (user) {
       var date = childSnapshot.val().dateStarted;
       var time = childSnapshot.val().hours;
       var rating = childSnapshot.val().rating;
-
+// add data to the table 
       var newRow = $("<tr>").append(
         $("<td>").text(name),
         $("<td>").text(date),
