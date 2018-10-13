@@ -55,3 +55,20 @@ body {
 img {
   height: 250px;
 }
+
+#sign-in-form
+{
+  margin-left: 200px;
+}
+
+#banner{
+  font-family: 'K2D', sans-serif;
+  text-shadow: -1px 0 rgb(56, 119, 255), 0 1px rgb(56, 119, 255), 1px 0 rgb(56, 119, 255), 0 -1px rgb(56, 119, 255);
+}
+
+#sign-back-in{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+ margin-top: 50px;
+ margin-left: 200px;
+}
