@@ -1,9 +1,0 @@
-/* CTA */
-
-	#cta {
-		@include breakpoint(small) {
-			br {
-				display: none;
-			}
-		}
-	}
