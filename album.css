@@ -6,9 +6,10 @@
   padding-top: var(--jumbotron-padding-y);
   padding-bottom: var(--jumbotron-padding-y);
   margin-bottom: 0;
-  background-color: #fff;
-  min-height: 100px;
+  background-color: #002850c0 ;
+  height: 270px;
 }
+
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: calc(var(--jumbotron-padding-y) * 2);
@@ -16,6 +17,26 @@
   }
 }
 
+#main-header{
+  font-size: 75px;
+  margin-top: -95px;
+  margin-bottom:0px;
+  font-family: 'Racing Sans One', cursive;
+  text-shadow: -1px 0 rgb(202, 202, 202), 0 1px rgb(202, 202, 202), 1px 0 rgb(202, 202, 202), 0 -1px rgb(202, 202, 202);
+}
+
+#top-paragraph{
+  font-family: 'Oswald', sans-serif;
+  font-size: 17px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: rgb(219, 219, 219);
+}
+
+#hobby-track{
+  margin-bottom: -100px;
+
+}
 .jumbotron p:last-child {
   margin-bottom: 0;
 }
@@ -38,7 +59,8 @@ footer p {
 }
 
 body {
-  background-image: url(./assets/css/images/country-quilt.png)
+  background-image: url(./assets/css/images/country-quilt.png);
+  font-family: 'Oswald', sans-serif;
 }
 
 .content {
@@ -46,15 +68,97 @@ body {
   overflow: hidden;
   margin-left: 25px;
 }
+#display-name{
+  margin-left: 20px;
+
+}
+#city-search{
+  margin-left: 224px;
+}
+#current-weather{
+  font-family: 'Baloo Bhaijaan', cursive;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-left: 200px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+}
+#city-name{
+  font-family: 'Baloo Bhaijaan', cursive;
+  font-size: 25px;
+  margin-left: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+}
+#city-search{
+  margin-left: 75px;
+  
+}
+#search{
+  font-family: 'Baloo Bhaijaan', cursive;
+  background-color: 	#00a5a5;
+  color: black;
+  border: thin;
+  border-radius: 5px;
+  border-color: black;
+
+}
 
 .btn {
-  background-color: darkcyan;
+  font-family: 'Baloo Bhaijaan', cursive;
+  background-color: 	#00a5a5;
   color: black;
   border-color: black;
+}
+#back-top{
+  font-family: 'Baloo Bhaijaan', cursive;
+  color:white
+}
+
+#footer{
+  background-color: #002850c0;
+  height: 70px;
 }
 
 img {
   height: 250px;
+}
+
+#main-header-login{  
+  background-color: #002850c0 ;
+  height: 270px;
+  font-size: 75px;
+  margin-top: 0px;
+  margin-bottom:30px;
+  font-family: 'Racing Sans One', cursive;
+  text-shadow: -1px 0 rgb(202, 202, 202), 0 1px rgb(202, 202, 202), 1px 0 rgb(202, 202, 202), 0 -1px rgb(202, 202, 202);
+
+}
+#main-header-register{
+  background-color: #002850c0 ;
+  height: 270px;
+  font-size: 75px;
+  margin-top: 0px;
+  margin-bottom:30px;
+  font-family: 'Racing Sans One', cursive;
+  text-shadow: -1px 0 rgb(202, 202, 202), 0 1px rgb(202, 202, 202), 1px 0 rgb(202, 202, 202), 0 -1px rgb(202, 202, 202);
+
+}
+#main-header-tracker{
+  background-color: #002850c0 ;
+  height: 270px;
+  font-size: 75px;
+  margin-top: 0px;
+  margin-bottom:30px;
+  font-family: 'Racing Sans One', cursive;
+  text-shadow: -1px 0 rgb(202, 202, 202), 0 1px rgb(202, 202, 202), 1px 0 rgb(202, 202, 202), 0 -1px rgb(202, 202, 202);
+
+}
+
+#log-out{
+  background-color: darkcyan;
+float: right;
 }
 
 #sign-in-form
@@ -62,13 +166,8 @@ img {
   margin-left: 200px;
 }
 
-#banner{
-  font-family: 'K2D', sans-serif;
-  text-shadow: -1px 0 rgb(56, 119, 255), 0 1px rgb(56, 119, 255), 1px 0 rgb(56, 119, 255), 0 -1px rgb(56, 119, 255);
-}
-
 #sign-back-in{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 20px;
  margin-top: 50px;
  margin-left: 200px;

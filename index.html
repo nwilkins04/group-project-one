@@ -17,6 +17,9 @@
 
   <!-- Custom styles for this template -->
   <link href="album.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>
 
 <body>
@@ -149,8 +152,16 @@
           $("p").show("slow");
         });
         </script>
-
+    
         <div>
+          <label for="display-name"><h3 id="current-weather">Current Weather</h3></label>
+          <input type="text" id="display-name" placeholder="Current Weather">
+        </div>
+        <div>
+        <label for="city-search"><h3 id="city-name">City Name</h3></label>
+          <input type="text" id="city-search" placeholder="e.g. Rochester, NY">
+          <button id="search">Submit</button>
+        </div>
 
           <div class="row">
             <div class="col-6">
@@ -392,16 +403,15 @@
           </div>
       </main>
 
-      <footer class="text-muted">
+      <footer id= "footer">
         <div class="container">
           <p class="float-right">
-            <a href="#">Back to top</a>
+            <a href="#" id="back-top">Back to top</a>
           </p>
         </div>
       </footer>
 
-      <!-- Bootstrap core JavaScript
-    ================================================== -->
+      <!-- Bootstrap core JavaScript -->
       <!-- Placed at the end of the document so the pages load faster -->
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" crossorigin="anonymous"></script>
