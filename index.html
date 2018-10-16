@@ -126,6 +126,21 @@
         });
 })
       });
+
+
+             $('#scriptsForm').click(function (e) {
+        $.ajax({
+          type: 'GET',
+          url: 'http://api.open-notify.org/iss-now.json',
+          //data: $('#scriptsForm').serialize(),
+          success: function (data) {
+            console.log(data.iss_position);
+            
+            $('#iss-long').html(data.iss_position.longitude);
+            $('#iss-lat').html(data.iss_position.latitude);
+          }
+        });
+})
  
     </script>
     <header>
@@ -153,35 +168,26 @@
         });
         </script>
     
-        <div>
-          <label for="display-name"><h3 id="current-weather">Current Weather</h3></label>
-          <input type="text" id="display-name" placeholder="Current Weather">
-        </div>
-        <div>
-        <label for="city-search"><h3 id="city-name">City Name</h3></label>
-          <input type="text" id="city-search" placeholder="e.g. Rochester, NY">
+    <div class="row">
+      <div class="col-6">
+          <label for="city-search">City Name</label>
+          <input type="text" id="city-search" placeholder="e.g. Rochester">
           <button id="search">Submit</button>
-        </div>
+      </div>
+    </div>
+   
 
-          <div class="row">
-            <div class="col-6">
-                <label for="city-search">City Name</label>
-                <input type="text" id="city-search" placeholder="e.g. Rochester">
-                <button id="search">Submit</button>
-            </div>
+    <div class="row">
+      <div class="col-6">
+          <label>International Space Station Current Location </label>
+          <button id="scriptsForm">Submit</button>
+          <div style="border:1px solid black;width:8rem;">
+              <p id="iss-long"></p>
+              <p id="iss-lat"></p>
           </div>
-         
-
-          <div class="row">
-            <div class="col-6">
-                <label>International Space Station Current Location </label>
-                <button id="scriptsForm">Submit</button>
-                <div style="border:1px solid black;width:8rem;">
-                    <p id="iss-long"></p>
-                    <p id="iss-lat"></p>
-                </div>
-            </div>
-          </div>
+      </div>
+    </div>
+    
 
           <div class="container">
             <div class="row">
