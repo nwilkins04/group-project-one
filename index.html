@@ -112,36 +112,20 @@
         });
 
 
-             $('#scriptsForm').click(function (e) {
-        $.ajax({
-          type: 'GET',
-          url: 'http://api.open-notify.org/iss-now.json',
-          //data: $('#scriptsForm').serialize(),
-          success: function (data) {
-            console.log(data.iss_position);
-            
-            $('#iss-long').html(data.iss_position.longitude);
-            $('#iss-lat').html(data.iss_position.latitude);
-          }
-        });
-})
+        $('#scriptsForm').click(function (e) {
+          $.ajax({
+            type: 'GET',
+            url: 'http://api.open-notify.org/iss-now.json',
+            //data: $('#scriptsForm').serialize(),
+            success: function (data) {
+              console.log(data.iss_position);
+
+              $('#iss-long').html(data.iss_position.longitude);
+              $('#iss-lat').html(data.iss_position.latitude);
+            }
+          });
+        })
       });
-
-
-             $('#scriptsForm').click(function (e) {
-        $.ajax({
-          type: 'GET',
-          url: 'http://api.open-notify.org/iss-now.json',
-          //data: $('#scriptsForm').serialize(),
-          success: function (data) {
-            console.log(data.iss_position);
-            
-            $('#iss-long').html(data.iss_position.longitude);
-            $('#iss-lat').html(data.iss_position.latitude);
-          }
-        });
-})
- 
     </script>
     <header>
 
@@ -157,249 +141,249 @@
               <a href="login.html" class="btn btn-primary my-2">Track your Hobbies</a>
             </p>
           </div>
+          <p style="display: none"></p>
         </section>
 
 
-        <p style="display: none"></p>
+
 
         <script>
-        $("label").click(function () {
-          $("p").show("slow");
-        });
+          
+          $("button").click(function () {
+            $("p").show("slow");
+          });
         </script>
-    
-    <div class="row">
-      <div class="col-6">
-          <label for="city-search">City Name</label>
-          <input type="text" id="city-search" placeholder="e.g. Rochester">
-          <button id="search">Submit</button>
-      </div>
-    </div>
-   
 
-    <div class="row">
-      <div class="col-6">
-          <label>International Space Station Current Location </label>
-          <button id="scriptsForm">Submit</button>
-          <div style="border:1px solid black;width:8rem;">
+        <div class="row">
+          <div class="col-6">
+            <label for="city-search">City Name</label>
+            <input type="text" id="city-search" placeholder="e.g. Rochester">
+            <button id="search">Submit</button>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-6">
+            <label>International Space Station Current Location </label>
+            <button id="scriptsForm">Submit</button>
+            <div style="border:1px solid black;width:8rem;">
               <p id="iss-long"></p>
               <p id="iss-lat"></p>
+            </div>
           </div>
-      </div>
-    </div>
-    
+        </div>
 
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                  <img class="card-img-top" src="../group-project-one/assets/css/images/boats-canoe-clouds-831545.jpg"
-                    alt="man fishing from boat">
-                  <div class="card-body">
-                    <p class="card-text">Fishing</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
-                        <div class="content">
-                          All about Fishing:
-                          <p>Fishing dates back to the begining of the Upper Paleolithic period about 40,000 years ago.</p>
-                          <p>Different fishing techniques include: hand gathering, spearfishing, netting, angling, and
-                            trapping. Recreational, commercial and artisanal fishers use different techniques.</p>
-                          <a href="https://en.wikipedia.org/wiki/Fishing">
-                            <p> Fore more info continue reading here</p>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                  <img class="card-img-top" src="../group-project-one/assets/css/images/animal-avian-beak-349758.jpg"
-                    alt="still image of hummingbird">
-                  <div class="card-body">
-                    <p class="card-text">Birdwatching</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
-                        <div class="content">
-                          All about Birdwatching:
-                          <p>Birding or birdwatching means learning to identify the birds and understand what they are
-                            doing.</p>
-                          <p>To start birding all you need is a pair of binoculars, a field guide, and a hat. Possibly
-                            even a notebook to carry in your pocket.</p>
-                          <a href="www.birdwatching.com/briding.html">
-                            <p>For more info continue reading here</p>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                  <img class="card-img-top" src="./assets/css/images/alpine-alps-bigair-38242.jpg" alt="snowboarder in mid-air of jump">
-                  <div class="card-body">
-                    <p class="card-text">Snowboarding</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
-                        <div class="content">
-                          All about Snowboarding:
-                          <p>Snowboarding is a recreational activity and Olympic and Paralympic sport that involves
-                            decending a snow-covered slope while standing on a snowboard attached to a rider's feet</p>
-                          <p>It was developed in the U.S. in the 1960s and became an Olympic sport in 1998 and
-                            Paralympi
-                            sport in 2014.</p>
-                          <a href="https://en.wikipedia/org/wiki/Snowboarding">
-                            <p>For more info continue reading here</p>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                  <img class="card-img-top" src="./assets/css/images/adult-book-book-series-545068.jpg" alt="two adults reading books">
-                  <div class="card-body">
-                    <p class="card-text">Reading</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
-                        <div class="content">
-                          All about Reading:
-                          <p>Reading is a complex cognitive process of decoding symbols in order to construct or derive
-                            meaning.</p>
-                          <p>The history of reading dates back to the invention of writing during the 4th milennium BC</p>
-                          <a href="https://en.wikipedia.org/wiki/Reading_(process)">
-                            <p>For more info continue reading here</p>
-                          </a>
-                        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="../group-project-one/assets/css/images/boats-canoe-clouds-831545.jpg"
+                  alt="man fishing from boat">
+                <div class="card-body">
+                  <p class="card-text">Fishing</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
+                      <div class="content">
+                        All about Fishing:
+                        <p>Fishing dates back to the begining of the Upper Paleolithic period about 40,000 years ago.</p>
+                        <p>Different fishing techniques include: hand gathering, spearfishing, netting, angling, and
+                          trapping. Recreational, commercial and artisanal fishers use different techniques.</p>
+                        <a href="https://en.wikipedia.org/wiki/Fishing">
+                          <p> Fore more info continue reading here</p>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                  <img class="card-img-top" src="./assets/css/images/Ultimate-Frisbee1_large_large.jpg" alt="two men mid-catch in game of ultimate frisbee">
-                  <div class="card-body">
-                    <p class="card-text">Ulitmate Frisbee</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
-                        <div class="content">
-                          All about Ultimate Frisbee:
-                          <p>Ultimate was developed in 1968 by a group of students at Columbia High School in
-                            Maplewood,
-                            N.J.</p>
-                          <p>It combines the non-stop movement and athletic endurance of soccer with the aerial passing
-                            skills of football, played by two teams with a flying disc on a field with end zones with
-                            the
-                            object to score by catching a pass in the opponent's end zone.</p>
-                          <a href="http://www.usaultimate.org/about/ultimate/">
-                            <p>For more information continue reading here</p>
-                          </a>
-                        </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="../group-project-one/assets/css/images/animal-avian-beak-349758.jpg" alt="still image of hummingbird">
+                <div class="card-body">
+                  <p class="card-text">Birdwatching</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
+                      <div class="content">
+                        All about Birdwatching:
+                        <p>Birding or birdwatching means learning to identify the birds and understand what they are
+                          doing.</p>
+                        <p>To start birding all you need is a pair of binoculars, a field guide, and a hat. Possibly
+                          even a notebook to carry in your pocket.</p>
+                        <a href="www.birdwatching.com/briding.html">
+                          <p>For more info continue reading here</p>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                  <img class="card-img-top" src="./assets/css/images/doing_quilting_sq.jpg" alt="hand sewing quilting">
-                  <div class="card-body">
-                    <p class="card-text">Quilting</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
-                        <div class="content">
-                          All about Quilting:
-                          <p>Quilting is the process of sewing two or more layers of fabric together to make a thicker
-                            padded material - typically done with three layers.</p>
-                          <p>The earliest known quilted garment is depicted on the carved ivory figure of a Pharaoh
-                            ~3400
-                            BC and a quilted floor in Mongolia dating between 100 BC to 200 AD.</p>
-                          <a href="https://en.wikipedia.org/wiki/Quilting">
-                            <p>For more information continue reading here</p>
-                          </a>
-                        </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="./assets/css/images/alpine-alps-bigair-38242.jpg" alt="snowboarder in mid-air of jump">
+                <div class="card-body">
+                  <p class="card-text">Snowboarding</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
+                      <div class="content">
+                        All about Snowboarding:
+                        <p>Snowboarding is a recreational activity and Olympic and Paralympic sport that involves
+                          decending a snow-covered slope while standing on a snowboard attached to a rider's feet</p>
+                        <p>It was developed in the U.S. in the 1960s and became an Olympic sport in 1998 and
+                          Paralympi
+                          sport in 2014.</p>
+                        <a href="https://en.wikipedia/org/wiki/Snowboarding">
+                          <p>For more info continue reading here</p>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                  <img class="card-img-top" src="./assets/css/images/bigstock-Beach-Volleyball-Silhouette-81799844_(1).jpg"
-                    alt="beach volleyball at sunset">
-                  <div class="card-body">
-                    <p class="card-text">Volleyball</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
-                        <div class="content">
-                          All about Volleyball:
-                          <p>Created by William G. Morgan in 1895 originally calling it Mintonette</p>
-                          <p>It is a team sport in which two teams of six players are separated by a net, each team
-                            tried
-                            to score points by grounding a ball on the other team's court under organized rules.</p>
-                          <a href="www.volleyball.com">
-                            <p>For more info continue reading here</p>
-                          </a>
-                        </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="./assets/css/images/adult-book-book-series-545068.jpg" alt="two adults reading books">
+                <div class="card-body">
+                  <p class="card-text">Reading</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
+                      <div class="content">
+                        All about Reading:
+                        <p>Reading is a complex cognitive process of decoding symbols in order to construct or derive
+                          meaning.</p>
+                        <p>The history of reading dates back to the invention of writing during the 4th milennium BC</p>
+                        <a href="https://en.wikipedia.org/wiki/Reading_(process)">
+                          <p>For more info continue reading here</p>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                  <img class="card-img-top" src="./assets/css/images/golf.jpg" alt="man after full swing of golf">
-                  <div class="card-body">
-                    <p class="card-text">Golf</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
-                        <div class="content">
-                          All about golfing:
-                          <p>Golf is a club and ball sport in which players use various clubs to hit balls into a
-                            series
-                            of holes on course in as few strokes as possible.</p>
-                          <p>Nodern golf originated in the 15th central Scotland.</p>
-                          <a href="https://en.wikipedia/org/wiki/Golf">
-                            <p>For more info continue reading here</p>
-                          </a>
-                        </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="./assets/css/images/Ultimate-Frisbee1_large_large.jpg" alt="two men mid-catch in game of ultimate frisbee">
+                <div class="card-body">
+                  <p class="card-text">Ulitmate Frisbee</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
+                      <div class="content">
+                        All about Ultimate Frisbee:
+                        <p>Ultimate was developed in 1968 by a group of students at Columbia High School in
+                          Maplewood,
+                          N.J.</p>
+                        <p>It combines the non-stop movement and athletic endurance of soccer with the aerial passing
+                          skills of football, played by two teams with a flying disc on a field with end zones with
+                          the
+                          object to score by catching a pass in the opponent's end zone.</p>
+                        <a href="http://www.usaultimate.org/about/ultimate/">
+                          <p>For more information continue reading here</p>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                  <img class="card-img-top" src="./assets/css/images/appliance-cooking-housework-273850.jpg" alt="person looking at cooking book with appliances in front">
-                  <div class="card-body">
-                    <p class="card-text">Cooking</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
-                        <div class="content">
-                          All about Cooking:
-                          <p>Cooking is the art, technology, science and craft of preparing food for consumption.</p>
-                          <p>Human ancestors may have invented cooking as far back as 1.8 million to 2.3 million years
-                            ago.</p>
-                          <a href="https://en.wikipedia.org/wiki/Cooking">
-                            <p>For more info continue reading here</p>
-                          </a>
-                        </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="./assets/css/images/doing_quilting_sq.jpg" alt="hand sewing quilting">
+                <div class="card-body">
+                  <p class="card-text">Quilting</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
+                      <div class="content">
+                        All about Quilting:
+                        <p>Quilting is the process of sewing two or more layers of fabric together to make a thicker
+                          padded material - typically done with three layers.</p>
+                        <p>The earliest known quilted garment is depicted on the carved ivory figure of a Pharaoh
+                          ~3400
+                          BC and a quilted floor in Mongolia dating between 100 BC to 200 AD.</p>
+                        <a href="https://en.wikipedia.org/wiki/Quilting">
+                          <p>For more information continue reading here</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="./assets/css/images/bigstock-Beach-Volleyball-Silhouette-81799844_(1).jpg"
+                  alt="beach volleyball at sunset">
+                <div class="card-body">
+                  <p class="card-text">Volleyball</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
+                      <div class="content">
+                        All about Volleyball:
+                        <p>Created by William G. Morgan in 1895 originally calling it Mintonette</p>
+                        <p>It is a team sport in which two teams of six players are separated by a net, each team
+                          tried
+                          to score points by grounding a ball on the other team's court under organized rules.</p>
+                        <a href="www.volleyball.com">
+                          <p>For more info continue reading here</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="./assets/css/images/golf.jpg" alt="man after full swing of golf">
+                <div class="card-body">
+                  <p class="card-text">Golf</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
+                      <div class="content">
+                        All about golfing:
+                        <p>Golf is a club and ball sport in which players use various clubs to hit balls into a
+                          series
+                          of holes on course in as few strokes as possible.</p>
+                        <p>Nodern golf originated in the 15th central Scotland.</p>
+                        <a href="https://en.wikipedia/org/wiki/Golf">
+                          <p>For more info continue reading here</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="./assets/css/images/appliance-cooking-housework-273850.jpg" alt="person looking at cooking book with appliances in front">
+                <div class="card-body">
+                  <p class="card-text">Cooking</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="collapsible btn btn-sm btn-outline-secondary">View</button>
+                      <div class="content">
+                        All about Cooking:
+                        <p>Cooking is the art, technology, science and craft of preparing food for consumption.</p>
+                        <p>Human ancestors may have invented cooking as far back as 1.8 million to 2.3 million years
+                          ago.</p>
+                        <a href="https://en.wikipedia.org/wiki/Cooking">
+                          <p>For more info continue reading here</p>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -407,9 +391,10 @@
               </div>
             </div>
           </div>
+        </div>
       </main>
 
-      <footer id= "footer">
+      <footer id="footer">
         <div class="container">
           <p class="float-right">
             <a href="#" id="back-top">Back to top</a>
@@ -428,20 +413,20 @@
 
       <!--personal js-->
       <script>
-          var coll = document.getElementsByClassName("collapsible");
-          var i;
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
 
-          for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function () {
-              this.classList.toggle("active");
-              var content = this.nextElementSibling;
-              if (content.style.display === "block") {
-                content.style.display = "none";
-              } else {
-                content.style.display = "block";
-              }
-            });
-          }
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
       </script>
   </body>
 
